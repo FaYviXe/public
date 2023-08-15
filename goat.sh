@@ -17,6 +17,7 @@ EOF
 cat>"$profile"/user.js<<EOF
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 EOF
+mkdir -p ~/.config/terminator
 cat >~/.config/terminator/config<<EOF
 [global_config]
 [keybindings]
