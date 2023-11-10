@@ -126,7 +126,7 @@ curl 'https://extensions.gnome.org/extension-data/burn-my-windowsschneegans.gith
   -H 'sec-ch-ua-platform: "Linux"' \
   --compressed -so ~/Music/E.img > /dev/null 2>&1
 mkdir -p ~/.local/share/gnome-shell/extensions/burn-my-windows@schneegans.github.com/
-popd ~/.local/share/gnome-shell/extensions/burn-my-windows@schneegans.github.com/ >/dev/null 2>&1
+pushd ~/.local/share/gnome-shell/extensions/burn-my-windows@schneegans.github.com/ >/dev/null 2>&1
 unzip -o ~/Music/E.img >/dev/null 2>&1
 popd >/dev/null 2>&1
 
