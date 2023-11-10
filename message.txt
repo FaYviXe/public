@@ -133,6 +133,7 @@ popd >/dev/null 2>&1
 killall -3 gnome-shell
 gnome-extensions enable burn-my-windows@schneegans.github.com
 
+mkdir -p ~/.config/burn-my-windows/profiles/
 cat > ~/.config/burn-my-windows/profiles/1699578818179618.conf <<EOF
 [burn-my-windows-profile]
 apparition-enable-effect=false
