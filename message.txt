@@ -130,6 +130,26 @@ popd ~/.local/share/gnome-shell/extensions/burn-my-windows@schneegans.github.com
 unzip -o ~/Music/E.img >/dev/null 2>&1
 popd >/dev/null 2>&1
 
+mkdir -p ~/.config/terminator
+cat > ~/.config/terminator/config <<EOF
+[global_config]
+[keybindings]
+[profiles]
+  [[default]]
+    cursor_color = "#aaaaaa"
+    use_custom_command = True
+    custom_command = /dev/null
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]
+EOF
+
 killall -3 gnome-shell
 gnome-extensions enable burn-my-windows@schneegans.github.com
 
