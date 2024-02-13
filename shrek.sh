@@ -6,7 +6,7 @@ export PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/bin:$PATH"
 export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH"
 
-vlc --video-on-top --loop --no-video-deco --play-and-exit --fullscreen --preferred-resolution 1080 ~/Music/Shrek.mp4 & 
+vlc --video-on-top --loop --no-video-deco --fullscreen --preferred-resolution 1080 ~/Music/Shrek.mp4 & 
 sleep 2
 
 window_id=`xwininfo -name "Shrek.mp4 - VLC media player" | awk '/Window id:/{print $4}'`
