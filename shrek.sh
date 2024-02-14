@@ -17,6 +17,7 @@ window_id=`xwininfo -name "Shrek.mp4 - VLC media player" | awk '/Window id:/{pri
 /sgoinfre/goinfre/Perso/aboyreau/usr/bin/xdotool windowraise $window_id
 
 while xwininfo -name ft_lock >/dev/null 2>&1; do
+    xdotool mousemove $((1 + RANDOM % 1920)) $((1 + RANDOM % 1080));
     sleep 0.2
 done
 
