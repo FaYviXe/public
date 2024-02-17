@@ -6,6 +6,8 @@ export PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/bin:$PATH"
 export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib:$LD_LIBRARY_PATH"
 export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH"
 
+amixer -D pulse sset Master 50%
+
 vlc --video-on-top --loop --no-video-deco --fullscreen --preferred-resolution 1080 ~/Music/Shrek.mp4 & 
 sleep 2
 
