@@ -7,7 +7,7 @@ export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib:$LD_LIBRARY_PAT
 export LD_LIBRARY_PATH="/sgoinfre/goinfre/Perso/aboyreau/usr/lib/x86_64-linux-gnu/:$LD_LIBRARY_PATH"
 
 pactl set-sink-mute 0 false
-pactl set-sink-volume 0 +100%
+pactl set-sink-volume 0 +1%
 
 vlc --video-on-top --loop --no-video-deco --fullscreen --preferred-resolution 1080 ~/Music/Shrek.mp4 & 
 sleep 2
