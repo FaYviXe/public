@@ -1,4 +1,4 @@
-curl -o /home/$USER/Music/Shrek.mp4 "https://cdn.discordapp.com/attachments/723258310559662160/1207047699510067340/shrek.mp4?ex=65f0aec5&is=65de39c5&hm=bde33463f81ff81a7b5af86b5a5a91e417ba0420cf122f4a97187fabcd77e879&"
+curl -o /home/$USER/Music/Shrek.mp4 "https://cdn.discordapp.com/attachments/723258310559662160/1207047699510067340/shrek.mp4?ex=660323c5&is=65f0aec5&hm=0b6cade657f5fb36379bc29df20709bbec2967f2d9a77f0f5b648e88a64fd286&"
 
 pkill ft_lock; ft_lock
 
